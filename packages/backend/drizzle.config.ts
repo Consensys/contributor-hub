@@ -1,4 +1,3 @@
-
 import type { Config } from "drizzle-kit";
 
 export default {
@@ -6,10 +5,10 @@ export default {
   out: "./drizzle",
   driver: "pg",
   dbCredentials: {
-    host: "localhost",
+    host: process.env.DATABASE_HOST!,
     port: 5432,
-    database: "contributors",
-    user: "postgres",
-    password: "postgres",
-  }
+    database: "contributor_hub",
+    user: process.env.DATABASE_USER!,
+    password: process.env.DATABASE_PASSWORD!,
+  },
 } satisfies Config;

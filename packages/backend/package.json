@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.50",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "migrate": "drizzle-kit generate:pg --schema ./src/database/schema.ts && bun run ./src/database/migrate.ts",
+    "studio": "drizzle-kit studio",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@elysiajs/swagger": "^1.0.5",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.20.18",
+    "drizzle-orm": "^0.30.10",
+    "elysia": "latest",
+    "node-fetch": "^3.3.2",
+    "octokit": "^4.0.2",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "module": "src/index.js"
+}

@@ -1,0 +1,27 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1715263293978,
+      "tag": "0000_friendly_jocasta",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1715263424046,
+      "tag": "0001_naive_tyger_tiger",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1715266270999,
+      "tag": "0002_dry_slipstream",
+      "breakpoints": true
+    }
+  ]
+}

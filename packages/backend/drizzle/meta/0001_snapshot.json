@@ -1,0 +1,79 @@
+{
+  "id": "1c8b33a8-b8c5-4216-8d39-4ce47c8e756f",
+  "prevId": "59c64e11-eccc-4f46-8237-8ecd8d5a7802",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "contributors": {
+      "name": "contributors",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "github": {
+          "name": "github",
+          "type": "varchar(25)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "wallet": {
+          "name": "wallet",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "issues_closed": {
+          "name": "issues_closed",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "pull_requests": {
+          "name": "pull_requests",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        },
+        "score": {
+          "name": "score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "default": 0
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "contributors_github_unique": {
+          "name": "contributors_github_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "github"
+          ]
+        },
+        "contributors_wallet_unique": {
+          "name": "contributors_wallet_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "wallet"
+          ]
+        }
+      }
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

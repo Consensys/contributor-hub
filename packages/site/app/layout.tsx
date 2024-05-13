@@ -1,8 +1,8 @@
 "use client";
 
 import { Inter } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 import "./globals.css";
-import Provider from "@/providers/WagmiProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Provider>
+      <SessionProvider>
         <body className={inter.className}>{children}</body>
-      </Provider>
+      </SessionProvider>
     </html>
   );
 }

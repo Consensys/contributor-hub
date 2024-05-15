@@ -31,8 +31,8 @@ export const ConnectWithGitHub = () => {
         <Image
           width={35}
           height={35}
-          src={user?.image || ""}
-          alt={user?.name || ""}
+          src={user?.image || "/placeholder.png"}
+          alt={user?.name || "User Image"}
           className="rounded-full"
         />
         <div>
